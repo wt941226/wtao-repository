@@ -1,0 +1,14 @@
+# ---------------------------数据库 Mybatis-plus相关配置   @author：王涛   @date：2019-10-20---------------------------
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: root
+mybatis-plus:
+  mapper-locations: classpath:mappers/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+  type-aliases-package: com.wt.blog.entity

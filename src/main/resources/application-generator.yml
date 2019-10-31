@@ -1,0 +1,40 @@
+# ---------------------------代码生成器相关配置   @author：王涛   @date：2019-10-20---------------------------
+
+generator:
+
+  #文件配置
+  projectPath: user.dir                                 # 输出至 项目路径  user.dir 代表当前项目
+  outPut: /src/main/java                                # 输出位置
+  author: wtao                                          # 作者
+
+
+  #包配置
+  package:
+    parentPackage: com.wt                               # 父级 包
+    moduleName: blog                                    # 模块名  生成后的包路径 parentPackage.moduleName
+    entityPackage: entity                               # 实体类 包, 如果不填，则使用默认
+    mapperPackage: base.dao                             # dao接口 包，如果不填，则使用默认
+    servicePackage: base.service                        # service接口 包，如果不填，则使用默认
+    serviceImplPackage: base.service.impl               # service实现类 包，如果不填，则使用默认
+    controllerPackage: controller                       # controller 包，如果不填，则使用默认
+    xmlPackage: mappers                                 # mapper文件 包，如果不填，则使用默认
+
+
+  #数据源配置
+  dataSource:
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=UTC
+    driver: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    tablePrefix: blog_                                  # 表前缀
+    tables: blog_.*                                     # 要生成的表名，多个表以 英文 逗号 隔开,支持正则表达式 blog_.* 代表匹配所有
+
+
+  # 策略配置，不需要相关配置的话，可以不用填写
+  strategy:
+    superEntity:                                        # 实体类 公共父类
+    superMapper:                                        # dao接口 公共父类
+    superService:                                       # service接口 公共父类
+    superServiceImpl:                                   # service实现类  公共父类
+    superController:                                    # controller  公共父类
+    superEntityColumns:                                 # 写入父类中的公共字段

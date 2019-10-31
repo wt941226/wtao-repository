@@ -1,0 +1,18 @@
+# ---------------------------集成 邮件 相关配置   @author：王涛   @date：2019-10-20---------------------------
+
+spring:
+  # JavaMailSender 邮件发送的配置
+  mail:
+    host: smtp.qq.com
+    port: 587
+    username: 1083877365@qq.com
+    default-encoding: UTF-8
+    #授权码
+    password: usdlalbbrayyjdhi
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true

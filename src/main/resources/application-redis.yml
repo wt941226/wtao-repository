@@ -1,0 +1,14 @@
+# ---------------------------Redis 相关配置   @author：王涛   @date：2019-10-20---------------------------
+
+spring:
+  redis:
+    host: 192.168.39.128
+    port: 6379
+    database: 0
+    timeout: 5000
+    jedis:
+      pool:
+        max-idle: 8
+        min-idle: 0
+        max-active: 8
+        max-wait: -1
